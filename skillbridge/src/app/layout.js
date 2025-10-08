@@ -1,0 +1,27 @@
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata = {
+  title: 'SkillBridge - Platform Pendidikan Inklusif',
+  description: 'Platform pendidikan inklusif untuk masa depan yang lebih baik',
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="id">
+      <body className="bg-gray-50 text-gray-900">
+        {children}
+      </body>
+    </html>
+  );
+}
